@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (strlen($_SESSION['map']) != 64)
+if (strlen($_SESSION['newFigures']))
     $_SESSION['map'] = '
     rnbqkbnrpppppppp11111111111111111111111111111111PPPPPPPPRNBQKBNR';
 

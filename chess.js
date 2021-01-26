@@ -5,6 +5,7 @@ var isDragging = false;
 
 $(function () {
     start();
+    $('.buttonNew').click(newFiguresPHP)
     setInterval('showFiguresPHP()', 3000)
 });
 
@@ -100,6 +101,10 @@ function getChessSymbol(figure) {
 
 function isBlackSquareAt(coord) {
     return (coord % 8 + Math.floor(coord / 8)) % 2;
+}
+
+function newFiguresPHP() {
+    $.get('chess.php?newFigures', showFigures)
 }
 
 function moveFigurePHP(frCoord, toCoord) {
